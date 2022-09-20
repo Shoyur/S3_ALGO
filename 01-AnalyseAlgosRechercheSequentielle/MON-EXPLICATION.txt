@@ -1,0 +1,1 @@
+Un tableau. Un while qui vérifie tout le tableau pour savoir à quel position est une donnée demandée. Ultra simple.

@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Periodique extends Ouvrage {
 
     private String nom;
@@ -6,14 +8,39 @@ public class Periodique extends Ouvrage {
     
     Periodique () {}
 
-    Periodique (String nom, int numero, int periodicite) {
+    Periodique (Date dateEmprunt, int cote, String nom, int numero, int periodicite) {
+        super(dateEmprunt, cote);
         this.nom = nom;
         this.numero = numero;
         this.periodicite = periodicite;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getPeriodicite() {
+        return periodicite;
+    }
+
+    public void setPeriodicite(int periodicite) {
+        this.periodicite = periodicite;
+    }
+
     public String toString() {
-        return super.toString() + "\t" + this.nom + "\t" + this.numero + "\t" + this.periodicite;
+        return super.toString() + "\nNom : (" + this.nom + "),\nNuméro : (" + this.numero + "),\nSorties par année : (" + this.periodicite + ").\n";
     }
 
 }

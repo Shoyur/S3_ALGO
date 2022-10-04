@@ -3,6 +3,5 @@ public interface IListeChainee {
     void ajouter(Object obj);
     void supprimer(Object obj);
     Noeud rechercher(Object obj);
-    void lister(Noeud obj);
-    
+    public void afficher();
 }

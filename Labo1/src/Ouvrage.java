@@ -1,21 +1,19 @@
+import java.util.Date;
+
 public class Ouvrage {
 
-    private String dateEmprunt;
+    private Date dateEmprunt;
     private int cote;
     
 
     Ouvrage () {}
 
-    Ouvrage (String dateEmprunt, int cote) {
+    Ouvrage (Date dateEmprunt, int cote) {
         this.dateEmprunt = dateEmprunt;
-        this.cote = Bibliotheque.cote + 1;
+        this.cote = cote;
     }
 
-    public String toString() {
-        return this.dateEmprunt + "\t" + this.cote;
-    }
-
-    public String getDateEmprunt() {
+    public Date getDateEmprunt() {
         return dateEmprunt;
     }
 
@@ -23,12 +21,16 @@ public class Ouvrage {
         return cote;
     }
 
-    public void setDateEmprunt(String dateEmprunt) {
+    public void setDateEmprunt(Date dateEmprunt) {
         this.dateEmprunt = dateEmprunt;
     }
 
     public void setCote(int cote) {
         this.cote = cote;
+    }
+    
+    public String toString() {
+        return "Date : (" + this.dateEmprunt + "),\nCote : (" + this.cote + "),";
     }
 
 }

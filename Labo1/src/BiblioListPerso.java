@@ -1,5 +1,8 @@
 // import java.util.*;
 
-public class BiblioListPerso extends Bibliotheque {
+
+
+public class BiblioListPerso extends ListeChaineeLivres {
+    static ListeChaineeLivres listeLivres;
 
 }

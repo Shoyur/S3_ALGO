@@ -4,16 +4,15 @@ public class Noeud {
     Noeud suiv;
     Noeud prec;
 
-    public Noeud() {
+    Noeud() {
         this.obj = null;
         this.suiv = null;
         this.prec = null;
     }
 
-    public Noeud(Object obj) {
-        this.obj = obj;
+    Noeud(Object infos) {
+        this.obj = infos;
         this.suiv = null;
         this.prec = null;
     }
-
 }

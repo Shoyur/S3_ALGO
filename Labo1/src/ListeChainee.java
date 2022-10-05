@@ -52,7 +52,7 @@ public class ListeChainee implements IListeChainee {
     }
 
 @Override
-    public void afficher(){
+    public void afficherListe(){
         Noeud pt = this.tete; 
         while(pt != null){
             System.out.println(pt.obj);

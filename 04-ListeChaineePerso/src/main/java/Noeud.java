@@ -1,16 +1,18 @@
 public class Noeud {
-    Object infos;
+
     Noeud suiv;
+    Object obj;
     Noeud prec;
 
-    Noeud(){
-        this.infos = null;
+    Noeud () {
         this.suiv = null;
+        this.obj = null;
         this.prec = null;
     }
-    Noeud(Object infos) {
-        this.infos = infos;
+
+    Noeud (Object obj) {
         this.suiv = null;
         this.prec = null;
+        this.obj = obj;
     }
 }

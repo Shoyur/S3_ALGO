@@ -8,7 +8,7 @@ public class GestionLivres {
         listeLivres.ajouter(unLivre1);
         listeLivres.ajouter(unLivre2);
         listeLivres.ajouter(unLivre3);
-        Livre L1 = (Livre) listeLivres.rechercher(unLivre1).infos;
+        Livre L1 = (Livre) listeLivres.rechercher(unLivre1).obj;
         System.out.println("\n**** INFOS DU unLivre1 ****");
         System.out.println(L1);
         System.out.println("\n**** LISTE DES LIVRES ****");

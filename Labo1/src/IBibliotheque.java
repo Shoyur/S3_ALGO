@@ -1,5 +1,5 @@
 public interface IBibliotheque {
-    void ajouter(Ouvrage objOuvrage);
-    void supprimer(int cote);
+    String ajouter(Ouvrage objOuvrage);
+    String supprimer(int cote);
     String rechercher(int cote);
 }

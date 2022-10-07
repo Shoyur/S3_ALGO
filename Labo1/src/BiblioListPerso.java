@@ -1,33 +1,34 @@
-// import java.util.*;
-
-
-
 public class BiblioListPerso implements IBibliotheque {
 
-    static ListeChaineeLivres listeLivres;
+    ListeChaineePerso listeLivres = new ListeChaineePerso();
+    int cote = 0;
 
     @Override
-    public void ajouter(Ouvrage objOuvrage) {
-        // TODO Auto-generated method stub
-        
+    public String ajouter(Ouvrage objOuvrage) {
+        listeLivres.ajouter(objOuvrage);
+        cote++;
+        return "Ouvrage no." + objOuvrage.getCote() + " ajouté avec succès.";
     }
 
     @Override
-    public void supprimer(int coteDemande) {
-        // TODO Auto-generated method stub
-        
+    public String supprimer(int coteDemande) {
+        listeLivres.supprimer(coteDemande);
+        cote--;
+        return "Ouvrage no." + coteDemande + " supprimé avec succès.";
     }
 
     @Override
     public String rechercher(int coteDemande) {
-        // TODO Auto-generated method stub
-        return null;
+        String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
+        Noeud pt = listeLivres.rechercher(coteDemande);
+        if (pt != null) {
+            resultat = pt.obj.toString();
+        }
+        return resultat;
     }
-
+    
     @Override
     public String toString() {
-        return "";
-        
+        return listeLivres.toString();
     }
-
 }

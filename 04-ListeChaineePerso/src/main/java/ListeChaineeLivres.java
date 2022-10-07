@@ -8,7 +8,7 @@ public class ListeChaineeLivres extends ListeChainee {
         if(pt == null){
             System.out.println("\nLivre inexistant!");
         }else {
-          ((Livre)  pt.infos).setTitre(titre);
+          ((Livre)  pt.obj).setTitre(titre);
         }
     }
 
@@ -17,14 +17,14 @@ public class ListeChaineeLivres extends ListeChainee {
         Noeud pt = listeLivres.tete;
         boolean trouve = false;
         while(pt != null && !trouve){
-            if(((Livre)  pt.infos).getNum() == numTrouver){
+            if(((Livre)  pt.obj).getNum() == numTrouver){
                 trouve = true;
             } else{
                 pt = pt.suiv;
             }
         }
         if (trouve){
-            return ((Livre)  pt.infos);
+            return ((Livre)  pt.obj);
         }else {
             return null;
         }

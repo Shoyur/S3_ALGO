@@ -1,33 +1,40 @@
 public class BiblioTab implements IBibliotheque {
 
     final int MAX = 20;
-    Ouvrage biblioTab[] = new Ouvrage [20];
+    Ouvrage biblioTab[] = new Ouvrage [MAX];
     int cote = 0;
 
     @Override
-    public void ajouter(Ouvrage objOuvrage) {
-        biblioTab[cote++] = objOuvrage;
+    public String ajouter(Ouvrage objOuvrage) {
+        String reponse = "Désolé, la bibliothèque est pleine avec un maximum de " + MAX + " ouvrages.";
+        if (cote < MAX) {
+            biblioTab[cote++] = objOuvrage;
+            return "Ouvrage no." + objOuvrage.getCote() + " ajouté avec succès.";
+        }
+        return reponse;
     }
 
     @Override
-    public void supprimer(int coteDemande) {
+    public String supprimer(int coteDemande) {
+        String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
         for (int i = 0; i <= cote; i++) {
             if (biblioTab[i].getCote() == coteDemande) {
                 biblioTab[i] = null;
                 cote--;
-                return;
+                resultat = "Ouvrage no." + coteDemande + " supprimé avec succès.";
+                break;
             }
         }
+        return resultat;
     }
 
     @Override
     public String rechercher(int coteDemande) {
-        String resultat = "L'ouvrage avec la cote no." + coteDemande + " n'existe pas.\n";
-        int i;
-        for (i = 0; i <= MAX; i++) {
+        String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
+        for (int i = 0; i <= cote; i++) {
             if (biblioTab[i].getCote() == coteDemande) {
-                resultat = "L'ouvrage avec la cote no." + coteDemande + " existe, et le voici :\n";
-                resultat += biblioTab[i] + "\n";
+                resultat = biblioTab[i].toString();
+                break;
             }
         }
         return resultat;
@@ -35,7 +42,7 @@ public class BiblioTab implements IBibliotheque {
 
     @Override
     public String toString() {
-        String resultat = "La bibliothèque contient " + cote + " objets et les voici :\n";
+        String resultat = "La bibliothèque contient " + cote + " ouvrage et les voici :\n";
         for (int i = 0; i <= cote; i++) {
             resultat += biblioTab[i] + "\n";
         }

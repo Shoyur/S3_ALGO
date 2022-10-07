@@ -1,24 +1,24 @@
 import java.util.Date;
 
-public class Ouvrage {
+public abstract class Ouvrage {
 
-    private Date dateEmprunt;
     private int cote;
+    private Date dateEmprunt;
     
+    Ouvrage() {}
 
-    Ouvrage () {}
-
-    Ouvrage (Date dateEmprunt, int cote) {
+    Ouvrage(Date dateEmprunt, int cote) {
         this.dateEmprunt = dateEmprunt;
         this.cote = cote;
     }
 
-    public Date getDateEmprunt() {
-        return dateEmprunt;
-    }
-
+    
     public int getCote() {
         return cote;
+    }
+
+    public Date getDateEmprunt() {
+        return dateEmprunt;
     }
 
     public void setDateEmprunt(Date dateEmprunt) {
@@ -30,7 +30,6 @@ public class Ouvrage {
     }
     
     public String toString() {
-        return "Date : (" + this.dateEmprunt + "),\nCote : (" + this.cote + "),";
+        return "(Cote: " + this.cote + "), (Date: " + this.dateEmprunt + ")";
     }
-
 }

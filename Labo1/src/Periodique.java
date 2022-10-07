@@ -6,9 +6,9 @@ public class Periodique extends Ouvrage {
     private int numero;
     private int periodicite;
     
-    Periodique () {}
+    Periodique() {}
 
-    Periodique (Date dateEmprunt, int cote, String nom, int numero, int periodicite) {
+    Periodique(Date dateEmprunt, int cote, String nom, int numero, int periodicite) {
         super(dateEmprunt, cote);
         this.nom = nom;
         this.numero = numero;
@@ -40,7 +40,7 @@ public class Periodique extends Ouvrage {
     }
 
     public String toString() {
-        return super.toString() + "\nNom : (" + this.nom + "),\nNuméro : (" + this.numero + "),\nSorties par année : (" + this.periodicite + ").\n";
+        return super.toString() + ", (Nom: " + this.nom + "), (Numéro: " + this.numero + "), (Sorties par année: " + this.periodicite + ").";
     }
 
 }

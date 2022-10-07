@@ -30,7 +30,7 @@ public class CD extends Ouvrage {
     }
 
     public String toString() {
-        return super.toString() + "\nAuteur : (" + this.auteur + "),\nTitre : (" + this.titre + ").\n";
+        return super.toString() + ", (Auteur: " + this.auteur + "), (Titre: " + this.titre + ").";
     }
 
 }

@@ -26,7 +26,7 @@ public class ListeChainee implements IlisteChainee {
     public Noeud rechercher(Object obj){
         Noeud pt = tete;
         while(pt != null){
-            if(pt.infos == obj){
+            if(pt.obj == obj){
                 return pt;// Pour sortir de la boucle
             }else {
                 pt = pt.suiv;
@@ -55,7 +55,7 @@ public class ListeChainee implements IlisteChainee {
     public void afficher(){
         Noeud pt = this.tete; 
         while(pt != null){
-            System.out.println(pt.infos);
+            System.out.println(pt.obj);
             pt = pt.suiv;
         }
     }

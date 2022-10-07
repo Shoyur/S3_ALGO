@@ -6,9 +6,9 @@ public class Livre extends Ouvrage {
     private String titre;
     private String editeur;
 
-    Livre () {}
+    Livre() {}
 
-    Livre (Date dateEmprunt, int cote, String auteur, String titre, String editeur) {
+    Livre(Date dateEmprunt, int cote, String auteur, String titre, String editeur) {
         super(dateEmprunt, cote);
         this.auteur = auteur;
         this.titre = titre;
@@ -40,7 +40,7 @@ public class Livre extends Ouvrage {
     }
 
     public String toString() {
-        return super.toString() + "\nAuteur : (" + this.auteur + "),\nTitre : (" + this.titre + "),\nÉditeur : (" + this.editeur + ").\n";
+        return super.toString() + ", (Auteur: " + this.auteur + "), (Titre: " + this.titre + "), (Éditeur: " + this.editeur + ").";
     }
 
 }

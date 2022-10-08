@@ -3,13 +3,14 @@ import java.util.*;
 public class BiblioList implements IBibliotheque {
 
     LinkedList<Ouvrage> biblioList = new LinkedList<>();
-    int cote = 0;
 
     @Override
     public String ajouter(Ouvrage objOuvrage) {
-        biblioList.add(objOuvrage);
-        cote++;
-        return "Ouvrage no." + objOuvrage.getCote() + " ajouté avec succès.";
+        String reponse = "Désolé, l'ouvrage n'a pas été ajouté'";
+        if (biblioList.add(objOuvrage)) {
+            reponse = "Ouvrage no." + objOuvrage.getCote() + " ajouté avec succès.";
+        }
+        return reponse;
     }
 
     @Override
@@ -18,7 +19,6 @@ public class BiblioList implements IBibliotheque {
         for (int i = 0; i < biblioList.size(); i++) {
             if (biblioList.get(i).getCote() == coteDemande) {
                 biblioList.remove(i);
-                cote--;
                 resultat = "Ouvrage no." + coteDemande + " supprimé avec succès.";
                 break;
             }
@@ -28,7 +28,7 @@ public class BiblioList implements IBibliotheque {
 
     @Override
     public String rechercher(int coteDemande) {
-        String resultat = "Il n'existe pas d'ouvrage avec le no." + coteDemande + "...";
+        String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
         for (int i = 0; i < biblioList.size(); i++) {
             if (biblioList.get(i).getCote() == coteDemande) {
                 resultat = biblioList.get(i).toString();
@@ -39,9 +39,9 @@ public class BiblioList implements IBibliotheque {
 
     @Override
     public String toString() {
-        String resultat = "La bibliothèque contient " + cote + " ouvrages et les voici :\n";
+        String resultat = "La bibliothèque contient " + biblioList.size() + " ouvrages et les voici :";
         for (int i = 0; i < biblioList.size(); i++) {
-            resultat += biblioList.get(i) + "\n";
+            resultat += "\n" + biblioList.get(i);
         }
         return resultat;
     }

@@ -40,7 +40,7 @@ public class Livre extends Ouvrage {
     }
 
     public String toString() {
-        return super.toString() + ", (Auteur: " + this.auteur + "), (Titre: " + this.titre + "), (Éditeur: " + this.editeur + ").";
+        return super.toString() + ", (Ouvrage: Livre), (Auteur: " + this.auteur + "), (Titre: " + this.titre + "), (Éditeur: " + this.editeur + ").";
     }
 
 }

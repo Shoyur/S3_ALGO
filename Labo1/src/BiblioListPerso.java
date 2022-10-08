@@ -1,26 +1,29 @@
 public class BiblioListPerso implements IBibliotheque {
 
-    ListeChaineePerso listeLivres = new ListeChaineePerso();
-    int cote = 0;
+    ListeChaineePerso biblioListPerso = new ListeChaineePerso();
 
     @Override
     public String ajouter(Ouvrage objOuvrage) {
-        listeLivres.ajouter(objOuvrage);
-        cote++;
-        return "Ouvrage no." + objOuvrage.getCote() + " ajouté avec succès.";
+        String reponse = "Désolé, l'ouvrage n'a pas été ajouté'";
+        if (biblioListPerso.ajouter(objOuvrage)) {
+            reponse = "Ouvrage no." + objOuvrage.getCote() + " ajouté avec succès.";
+        }
+        return reponse;
     }
 
     @Override
     public String supprimer(int coteDemande) {
-        listeLivres.supprimer(coteDemande);
-        cote--;
-        return "Ouvrage no." + coteDemande + " supprimé avec succès.";
+        String resultat = "Il n'existe pas d'ouvrage avec le no." + coteDemande + "...";
+        if (biblioListPerso.supprimer(coteDemande)) { 
+            resultat = "Ouvrage no." + coteDemande + " supprimé avec succès."; 
+        }
+        return resultat;
     }
 
     @Override
     public String rechercher(int coteDemande) {
         String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
-        Noeud pt = listeLivres.rechercher(coteDemande);
+        Noeud pt = biblioListPerso.rechercher(coteDemande);
         if (pt != null) {
             resultat = pt.obj.toString();
         }
@@ -29,6 +32,6 @@ public class BiblioListPerso implements IBibliotheque {
     
     @Override
     public String toString() {
-        return listeLivres.toString();
+        return biblioListPerso.toString();
     }
 }

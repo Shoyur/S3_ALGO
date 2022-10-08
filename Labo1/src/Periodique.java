@@ -40,7 +40,7 @@ public class Periodique extends Ouvrage {
     }
 
     public String toString() {
-        return super.toString() + ", (Nom: " + this.nom + "), (Numéro: " + this.numero + "), (Sorties par année: " + this.periodicite + ").";
+        return super.toString() + ", (Ouvrage: Périodique), (Nom: " + this.nom + "), (Numéro: " + this.numero + "), (Sorties par année: " + this.periodicite + ").";
     }
 
 }

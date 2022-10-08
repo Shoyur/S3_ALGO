@@ -17,7 +17,7 @@ public class BiblioTab implements IBibliotheque {
     @Override
     public String supprimer(int coteDemande) {
         String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
-        for (int i = 0; i <= cote; i++) {
+        for (int i = 0; i < cote; i++) {
             if (biblioTab[i].getCote() == coteDemande) {
                 biblioTab[i] = null;
                 cote--;
@@ -31,7 +31,8 @@ public class BiblioTab implements IBibliotheque {
     @Override
     public String rechercher(int coteDemande) {
         String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
-        for (int i = 0; i <= cote; i++) {
+        for (int i = 0; i < cote; i++) {
+            // System.out.println("Test: " + biblioTab[i].getCote());
             if (biblioTab[i].getCote() == coteDemande) {
                 resultat = biblioTab[i].toString();
                 break;
@@ -42,9 +43,9 @@ public class BiblioTab implements IBibliotheque {
 
     @Override
     public String toString() {
-        String resultat = "La bibliothèque contient " + cote + " ouvrage et les voici :\n";
-        for (int i = 0; i <= cote; i++) {
-            resultat += biblioTab[i] + "\n";
+        String resultat = "La bibliothèque contient " + cote + " ouvrages et les voici :";
+        for (int i = 0; i < cote; i++) {
+            if (biblioTab[i] != null) { resultat += "\n" + biblioTab[i]; }
         }
         return resultat;
     }

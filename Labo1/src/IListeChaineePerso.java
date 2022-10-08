@@ -1,5 +1,5 @@
 public interface IListeChaineePerso {
-    void ajouter(Ouvrage objOuvrage);
-    void supprimer(int cote);
+    boolean ajouter(Ouvrage objOuvrage);
+    boolean supprimer(int cote);
     Noeud rechercher(int cote);
 }

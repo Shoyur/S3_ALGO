@@ -5,7 +5,7 @@ public class BiblioTab implements IBibliotheque {
     int cote = 0;
 
     @Override
-    public String ajouter(Ouvrage objOuvrage) {
+    public String ajouter(Ouvrage objOuvrage) { // O(1) car n'entre même pas dans une boucle. Le pire cas toujours N car...
         String reponse = "Désolé, la bibliothèque est pleine avec un maximum de " + MAX + " ouvrages.";
         if (cote < MAX) {
             biblioTab[cote++] = objOuvrage;
@@ -15,7 +15,7 @@ public class BiblioTab implements IBibliotheque {
     }
 
     @Override
-    public String supprimer(int coteDemande) {
+    public String supprimer(int coteDemande) { // O(N) car entre dans un while.
         String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
         for (int i = 0; i < cote; i++) {
             if (biblioTab[i].getCote() == coteDemande) {
@@ -29,7 +29,7 @@ public class BiblioTab implements IBibliotheque {
     }
 
     @Override
-    public String rechercher(int coteDemande) {
+    public String rechercher(int coteDemande) { // O(N) car entre dans un while.
         String resultat = "Il n'existe pas d'ouvrage avec la cote " + coteDemande + "...";
         for (int i = 0; i < cote; i++) {
             // System.out.println("Test: " + biblioTab[i].getCote());
@@ -42,10 +42,12 @@ public class BiblioTab implements IBibliotheque {
     }
 
     @Override
-    public String toString() {
+    public String toString() { // O(N) car entre dans un while.
         String resultat = "La bibliothèque contient " + cote + " ouvrages et les voici :";
         for (int i = 0; i < cote; i++) {
-            if (biblioTab[i] != null) { resultat += "\n" + biblioTab[i]; }
+            if (biblioTab[i] != null) { 
+                resultat += "\n" + biblioTab[i]; 
+            }
         }
         return resultat;
     }

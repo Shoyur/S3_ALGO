@@ -53,8 +53,11 @@ public abstract class GestionBibliotheque {
         System.out.println(biblioList.rechercher(9));
         System.out.println(biblioListPerso.rechercher(9));
 
+        System.out.println("----------------------Je demande System.out.println(biblioTab) :");
         System.out.println(biblioTab);
+        System.out.println("----------------------Je demande System.out.println(biblioList) :");
         System.out.println(biblioList);
+        System.out.println("----------------------Je demande System.out.println(biblioListPerso) :");
         System.out.println(biblioListPerso);
 
         System.out.println(biblioTab.supprimer(3));

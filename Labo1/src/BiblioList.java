@@ -38,7 +38,7 @@ public class BiblioList implements IBibliotheque {
     }
 
     @Override
-    public String toString() { // O(N) car entre dans un for, sauf que...
+    public String toString() {
         String resultat = "La bibliothèque contient " + biblioList.size() + " ouvrages et les voici :";
         for (int i = 0; i < biblioList.size(); i++) {
             resultat += "\n" + biblioList.get(i);

@@ -31,7 +31,7 @@ public class BiblioListPerso implements IBibliotheque {
     }
     
     @Override
-    public String toString() { // O(N) car entre dans un while.
+    public String toString() {
         return biblioListPerso.toString();
     }
 }

@@ -5,7 +5,7 @@ public class BiblioTab implements IBibliotheque {
     int cote = 0;
 
     @Override
-    public String ajouter(Ouvrage objOuvrage) { // O(1) car n'entre même pas dans une boucle. Le pire cas toujours N car...
+    public String ajouter(Ouvrage objOuvrage) { // O(1) car n'entre même pas dans une boucle. Le pire cas toujours 1 car...
         String reponse = "Désolé, la bibliothèque est pleine avec un maximum de " + MAX + " ouvrages.";
         if (cote < MAX) {
             biblioTab[cote++] = objOuvrage;

@@ -1,0 +1,6 @@
+somme de 1 à n :
+disons n=5
+ça veut dire
+1+2+3+4+5
+même chose que
+(n-1)+n

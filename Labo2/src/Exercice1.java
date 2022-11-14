@@ -28,7 +28,7 @@ public class Exercice1 {
         afficher(); // seulement pour test !!!
         
         int tour = 0;
-        int max = (int)Math.pow(2, qteDisques)-1;
+        int max = (int)Math.pow(2, qteDisques)-1; // analyse big-O : O(2^n) ou plutôt O(2^n-1)
         int s1, s2;
         if (qteDisques % 2 == 0) { s1 = 1; s2 = 2; }
         else { s1 = 2; s2 = 1; }

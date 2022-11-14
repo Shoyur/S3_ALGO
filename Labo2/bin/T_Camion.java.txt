@@ -1,41 +1,41 @@
 import java.util.Date;
 
-public class F_T_Moto extends F_Terrestre {
+public class T_Camion extends F_Terrestre {
     
-    private boolean porteBagage;
-    private int tempsCylindres;
-    private String routeOuTerrain;
-
-    public F_T_Moto(int numeroSerie, String fabricant, Date dateFabrication, String gasPneus, boolean attacheRemorque,
-            double hauteurPassageLibreM, boolean porteBagage, int tempsCylindres, String routeOuTerrain) {
+    private String DieselEssence;
+    private int nombreEssieux;
+    private int chargeMaximale;
+    
+    public T_Camion(int numeroSerie, String fabricant, Date dateFabrication, String gasPneus, boolean attacheRemorque,
+            double hauteurPassageLibreM, String dieselEssence, int nombreEssieux, int chargeMaximale) {
         super(numeroSerie, fabricant, dateFabrication, gasPneus, attacheRemorque, hauteurPassageLibreM);
-        this.porteBagage = porteBagage;
-        this.tempsCylindres = tempsCylindres;
-        this.routeOuTerrain = routeOuTerrain;
+        DieselEssence = dieselEssence;
+        this.nombreEssieux = nombreEssieux;
+        this.chargeMaximale = chargeMaximale;
     }
 
-    public boolean isPorteBagage() {
-        return porteBagage;
+    public String getDieselEssence() {
+        return DieselEssence;
     }
 
-    public void setPorteBagage(boolean porteBagage) {
-        this.porteBagage = porteBagage;
+    public void setDieselEssence(String dieselEssence) {
+        DieselEssence = dieselEssence;
     }
 
-    public int getTempsCylindres() {
-        return tempsCylindres;
+    public int getNombreEssieux() {
+        return nombreEssieux;
     }
 
-    public void setTempsCylindres(int tempsCylindres) {
-        this.tempsCylindres = tempsCylindres;
+    public void setNombreEssieux(int nombreEssieux) {
+        this.nombreEssieux = nombreEssieux;
     }
 
-    public String getRouteOuTerrain() {
-        return routeOuTerrain;
+    public int getChargeMaximale() {
+        return chargeMaximale;
     }
 
-    public void setRouteOuTerrain(String routeOuTerrain) {
-        this.routeOuTerrain = routeOuTerrain;
+    public void setChargeMaximale(int chargeMaximale) {
+        this.chargeMaximale = chargeMaximale;
     }
 
     @Override
@@ -109,5 +109,4 @@ public class F_T_Moto extends F_Terrestre {
         // TODO Auto-generated method stub
         super.setNumeroSerie(numeroSerie);
     }
-    
 }

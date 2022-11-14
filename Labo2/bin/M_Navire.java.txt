@@ -1,12 +1,12 @@
 import java.util.Date;
 
-public class F_M_Navire extends F_Maritime {
+public class M_Navire extends F_Maritime {
 
     private String TransportOuGuerre;
     private int KlaxonDecibels;
     private boolean appareilPhotoPermis;
     
-    public F_M_Navire(int numeroSerie, String fabricant, Date dateFabrication, String couleur,
+    public M_Navire(int numeroSerie, String fabricant, Date dateFabrication, String couleur,
             boolean vesteFlotaisonFourni, int vitesseNoeudsMax, String transportOuGuerre, int klaxonDecibels,
             boolean appareilPhotoPermis) {
         super(numeroSerie, fabricant, dateFabrication, couleur, vesteFlotaisonFourni, vitesseNoeudsMax);

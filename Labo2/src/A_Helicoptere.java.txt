@@ -1,41 +1,41 @@
 import java.util.Date;
 
-public class F_A_Drone extends F_Aerien {
-
-    private int voltage;
-    private boolean camera;
-    private int porteeKM;
+public class A_Helicoptere extends F_Aerien {
     
-    public F_A_Drone(int numeroSerie, String fabricant, Date dateFabrication, int altituteMax, int pousseeAxiale,
-            int autonomieAir, int voltage, boolean camera, int porteeKM) {
+    private int nombreHelices;
+    private boolean treuilSecours;
+    private boolean mitraillette;
+
+    public A_Helicoptere(int numeroSerie, String fabricant, Date dateFabrication, int altituteMax, int pousseeAxiale,
+            int autonomieAir, int nombreHelices, boolean treuilSecours, boolean mitraillette) {
         super(numeroSerie, fabricant, dateFabrication, altituteMax, pousseeAxiale, autonomieAir);
-        this.voltage = voltage;
-        this.camera = camera;
-        this.porteeKM = porteeKM;
+        this.nombreHelices = nombreHelices;
+        this.treuilSecours = treuilSecours;
+        this.mitraillette = mitraillette;
     }
 
-    public int getVoltage() {
-        return voltage;
+    public int getNombreHelices() {
+        return nombreHelices;
     }
 
-    public void setVoltage(int voltage) {
-        this.voltage = voltage;
+    public void setNombreHelices(int nombreHelices) {
+        this.nombreHelices = nombreHelices;
     }
 
-    public boolean isCamera() {
-        return camera;
+    public boolean isTreuilSecours() {
+        return treuilSecours;
     }
 
-    public void setCamera(boolean camera) {
-        this.camera = camera;
+    public void setTreuilSecours(boolean treuilSecours) {
+        this.treuilSecours = treuilSecours;
     }
 
-    public int getPorteeKM() {
-        return porteeKM;
+    public boolean isMitraillette() {
+        return mitraillette;
     }
 
-    public void setPorteeKM(int porteeKM) {
-        this.porteeKM = porteeKM;
+    public void setMitraillette(boolean mitraillette) {
+        this.mitraillette = mitraillette;
     }
 
     @Override
@@ -109,5 +109,5 @@ public class F_A_Drone extends F_Aerien {
         // TODO Auto-generated method stub
         super.setPousseeAxiale(pousseeAxiale);
     }
-    
+
 }

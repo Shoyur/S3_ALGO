@@ -1,12 +1,12 @@
 import java.util.Date;
 
-public class F_T_Auto extends F_Terrestre {
+public class T_Auto extends F_Terrestre {
     
     private boolean pretPourHiver;
     private double volumecylindresL;
     private int nombreCylindres;
     
-    public F_T_Auto(int numeroSerie, String fabricant, Date dateFabrication, String gasPneus, boolean attacheRemorque,
+    public T_Auto(int numeroSerie, String fabricant, Date dateFabrication, String gasPneus, boolean attacheRemorque,
             double hauteurPassageLibreM, boolean pretPourHiver, double volumecylindresL, int nombreCylindres) {
         super(numeroSerie, fabricant, dateFabrication, gasPneus, attacheRemorque, hauteurPassageLibreM);
         this.pretPourHiver = pretPourHiver;

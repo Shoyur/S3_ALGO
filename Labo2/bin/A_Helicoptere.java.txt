@@ -1,41 +1,41 @@
 import java.util.Date;
 
-public class F_A_Avion extends F_Aerien {
-
-    private int passagers;
-    private boolean repasFourni;
-    private boolean massageErotiqueFourni;
+public class A_Helicoptere extends F_Aerien {
     
-    public F_A_Avion(int numeroSerie, String fabricant, Date dateFabrication, int altituteMax, int pousseeAxiale,
-            int autonomieAir, int passagers, boolean repasFourni, boolean massageErotiqueFourni) {
+    private int nombreHelices;
+    private boolean treuilSecours;
+    private boolean mitraillette;
+
+    public A_Helicoptere(int numeroSerie, String fabricant, Date dateFabrication, int altituteMax, int pousseeAxiale,
+            int autonomieAir, int nombreHelices, boolean treuilSecours, boolean mitraillette) {
         super(numeroSerie, fabricant, dateFabrication, altituteMax, pousseeAxiale, autonomieAir);
-        this.passagers = passagers;
-        this.repasFourni = repasFourni;
-        this.massageErotiqueFourni = massageErotiqueFourni;
+        this.nombreHelices = nombreHelices;
+        this.treuilSecours = treuilSecours;
+        this.mitraillette = mitraillette;
     }
 
-    public int getPassagers() {
-        return passagers;
+    public int getNombreHelices() {
+        return nombreHelices;
     }
 
-    public void setPassagers(int passagers) {
-        this.passagers = passagers;
+    public void setNombreHelices(int nombreHelices) {
+        this.nombreHelices = nombreHelices;
     }
 
-    public boolean isRepasFourni() {
-        return repasFourni;
+    public boolean isTreuilSecours() {
+        return treuilSecours;
     }
 
-    public void setRepasFourni(boolean repasFourni) {
-        this.repasFourni = repasFourni;
+    public void setTreuilSecours(boolean treuilSecours) {
+        this.treuilSecours = treuilSecours;
     }
 
-    public boolean isMassageErotiqueFourni() {
-        return massageErotiqueFourni;
+    public boolean isMitraillette() {
+        return mitraillette;
     }
 
-    public void setMassageErotiqueFourni(boolean massageErotiqueFourni) {
-        this.massageErotiqueFourni = massageErotiqueFourni;
+    public void setMitraillette(boolean mitraillette) {
+        this.mitraillette = mitraillette;
     }
 
     @Override
@@ -109,5 +109,5 @@ public class F_A_Avion extends F_Aerien {
         // TODO Auto-generated method stub
         super.setPousseeAxiale(pousseeAxiale);
     }
-    
+
 }

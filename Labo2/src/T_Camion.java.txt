@@ -1,12 +1,12 @@
 import java.util.Date;
 
-public class F_T_Camion extends F_Terrestre {
+public class T_Camion extends F_Terrestre {
     
     private String DieselEssence;
     private int nombreEssieux;
     private int chargeMaximale;
     
-    public F_T_Camion(int numeroSerie, String fabricant, Date dateFabrication, String gasPneus, boolean attacheRemorque,
+    public T_Camion(int numeroSerie, String fabricant, Date dateFabrication, String gasPneus, boolean attacheRemorque,
             double hauteurPassageLibreM, String dieselEssence, int nombreEssieux, int chargeMaximale) {
         super(numeroSerie, fabricant, dateFabrication, gasPneus, attacheRemorque, hauteurPassageLibreM);
         DieselEssence = dieselEssence;

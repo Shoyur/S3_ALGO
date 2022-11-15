@@ -1,0 +1,111 @@
+public class A_Helicoptere extends VehiculeAerien {
+    
+    // private int nombreHelices;
+    // private boolean treuilSecours;
+    // private boolean mitraillette;
+
+    // public A_Helicoptere(int numeroSerie, String fabricant, Date dateFabrication, int altituteMax, int pousseeAxiale,
+    //         int autonomieAir, int nombreHelices, boolean treuilSecours, boolean mitraillette) {
+    //     super(numeroSerie, fabricant, dateFabrication, altituteMax, pousseeAxiale, autonomieAir);
+    //     this.nombreHelices = nombreHelices;
+    //     this.treuilSecours = treuilSecours;
+    //     this.mitraillette = mitraillette;
+    // }
+
+    // public int getNombreHelices() {
+    //     return nombreHelices;
+    // }
+
+    // public void setNombreHelices(int nombreHelices) {
+    //     this.nombreHelices = nombreHelices;
+    // }
+
+    // public boolean isTreuilSecours() {
+    //     return treuilSecours;
+    // }
+
+    // public void setTreuilSecours(boolean treuilSecours) {
+    //     this.treuilSecours = treuilSecours;
+    // }
+
+    // public boolean isMitraillette() {
+    //     return mitraillette;
+    // }
+
+    // public void setMitraillette(boolean mitraillette) {
+    //     this.mitraillette = mitraillette;
+    // }
+
+    // @Override
+    // public int getAltituteMax() {
+    //     // TODO Auto-generated method stub
+    //     return super.getAltituteMax();
+    // }
+
+    // @Override
+    // public int getAutonomieAir() {
+    //     // TODO Auto-generated method stub
+    //     return super.getAutonomieAir();
+    // }
+
+    // @Override
+    // public Date getDateFabrication() {
+    //     // TODO Auto-generated method stub
+    //     return super.getDateFabrication();
+    // }
+
+    // @Override
+    // public String getFabricant() {
+    //     // TODO Auto-generated method stub
+    //     return super.getFabricant();
+    // }
+
+    // @Override
+    // public int getNumeroSerie() {
+    //     // TODO Auto-generated method stub
+    //     return super.getNumeroSerie();
+    // }
+
+    // @Override
+    // public int getPousseeAxiale() {
+    //     // TODO Auto-generated method stub
+    //     return super.getPousseeAxiale();
+    // }
+
+    // @Override
+    // public void setAltituteMax(int altituteMax) {
+    //     // TODO Auto-generated method stub
+    //     super.setAltituteMax(altituteMax);
+    // }
+
+    // @Override
+    // public void setAutonomieAir(int autonomieAir) {
+    //     // TODO Auto-generated method stub
+    //     super.setAutonomieAir(autonomieAir);
+    // }
+
+    // @Override
+    // public void setDateFabrication(Date dateFabrication) {
+    //     // TODO Auto-generated method stub
+    //     super.setDateFabrication(dateFabrication);
+    // }
+
+    // @Override
+    // public void setFabricant(String fabricant) {
+    //     // TODO Auto-generated method stub
+    //     super.setFabricant(fabricant);
+    // }
+
+    // @Override
+    // public void setNumeroSerie(int numeroSerie) {
+    //     // TODO Auto-generated method stub
+    //     super.setNumeroSerie(numeroSerie);
+    // }
+
+    // @Override
+    // public void setPousseeAxiale(int pousseeAxiale) {
+    //     // TODO Auto-generated method stub
+    //     super.setPousseeAxiale(pousseeAxiale);
+    // }
+
+}

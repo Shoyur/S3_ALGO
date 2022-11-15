@@ -1,11 +1,15 @@
-
-
 public abstract class Vehicule {
 
-    private String type = "";
-    private int numeroSerie = 0;
     private int vitesseKM = 0;
 
+    public int getVitesseKM() {
+        return vitesseKM;
+    }
 
+    public void setVitesseKM(int vitesseKM) {
+        this.vitesseKM = vitesseKM;
+    }
+
+    public abstract void voyager();
     
 }

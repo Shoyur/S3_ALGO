@@ -1,46 +1,37 @@
-public class M_Motomarine extends Vehicule {
+import java.util.Date;
 
-    public M_Motomarine() {
-    }
-
-    @Override
-    public void voyager() {
-        
-    }
+public class M_Voilier extends VehiculeMaritime {
     
-    // Vehicule unVehicule;
-    // private int passagers123;
-    // private boolean espacePourLaBiere;
-    // private int anneesGarantie;
+    // private int nombreChambres;
+    // private int nombreVoiles;
+    // private boolean moteurSecondaire;
 
-    // public M_Motomarine(int numeroSerie, String fabricant, Date dateFabrication, String couleur,
-    //         boolean vesteFlotaisonFourni, int vitesseNoeudsMax, int passagers123, boolean espacePourLaBiere,
-    //         int anneesGarantie) {
-        
+    // public M_Voilier(int numeroSerie, String fabricant, Date dateFabrication, String couleur,
+    //         boolean vesteFlotaisonFourni, int vitesseNoeudsMax, int nombreChambres, int nombreVoiles,
+    //         boolean moteurSecondaire) {
     //     super(numeroSerie, fabricant, dateFabrication, couleur, vesteFlotaisonFourni, vitesseNoeudsMax);
-    //     this.unVehicule = super.clone();
-    //     this.unVehicule.passagers123 = passagers123;
-    //     this.espacePourLaBiere = espacePourLaBiere;
-    //     this.anneesGarantie = anneesGarantie;
+    //     this.nombreChambres = nombreChambres;
+    //     this.nombreVoiles = nombreVoiles;
+    //     this.moteurSecondaire = moteurSecondaire;
     // }
     
-    // public int getPassagers123() {
-    //     return passagers123;
+    // public int getNombreChambres() {
+    //     return nombreChambres;
     // }
-    // public void setPassagers123(int passagers123) {
-    //     this.passagers123 = passagers123;
+    // public void setNombreChambres(int nombreChambres) {
+    //     this.nombreChambres = nombreChambres;
     // }
-    // public boolean isEspacePourLaBiere() {
-    //     return espacePourLaBiere;
+    // public int getNombreVoiles() {
+    //     return nombreVoiles;
     // }
-    // public void setEspacePourLaBiere(boolean espacePourLaBiere) {
-    //     this.espacePourLaBiere = espacePourLaBiere;
+    // public void setNombreVoiles(int nombreVoiles) {
+    //     this.nombreVoiles = nombreVoiles;
     // }
-    // public int getAnneesGarantie() {
-    //     return anneesGarantie;
+    // public boolean isMoteurSecondaire() {
+    //     return moteurSecondaire;
     // }
-    // public void setAnneesGarantie(int anneesGarantie) {
-    //     this.anneesGarantie = anneesGarantie;
+    // public void setMoteurSecondaire(boolean moteurSecondaire) {
+    //     this.moteurSecondaire = moteurSecondaire;
     // }
     // @Override
     // public String getCouleur() {
@@ -102,20 +93,4 @@ public class M_Motomarine extends Vehicule {
     //     // TODO Auto-generated method stub
     //     super.setVitesseNoeudsMax(vitesseNoeudsMax);
     // }
-
-
-    //         // boolean vesteFlotaisonFourni, int vitesseNoeudsMax, int passagers123, boolean espacePourLaBiere,
-    //         // int anneesGarantie
-    // public String toString() {
-    //     return "[ No. de série = " + this.unVehicule.getNumeroSerie() + 
-    //     ",   Fabricant = " + this.unVehicule.getFabricant() + 
-    //     ",   Date de fabrication = " + this.unVehicule.getDateFabrication() + 
-    //     ",   Couleur = " + this.unVehicule.s + 
-    //     ",   Veste flotaison fournie = " + this.unVehicule.isVesteFlotaisonFourni() + 
-    //     ",   Vitesse maximale (noeuds) = " + this.unVehicule.get() + 
-    //     ",   Nb. de passagers = " + this.unVehicule.get() + 
-    //     ",   Espace pour une bière = " + this.unVehicule.get() + 
-    //     ",   Nb. d'années de garantie = " + this.unVehicule.getA+" ]\n";
-    // }
-
 }

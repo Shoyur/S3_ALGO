@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class M_Voilier extends VehiculeMaritime {
     
     // private int nombreChambres;
